@@ -20,7 +20,7 @@
 		var/targetperception = (target_human.STAPER)
 
 		if(target_human.cmode)
-			targetperception += 4 // Target is alert
+			targetperception += 4 // Target is alert, gain +4 extra effective perception
 
 		if(HAS_TRAIT(user, TRAIT_CULTIC_THIEF)) // Matthios blesses his devout with rolling advantage on thieving checks.
 			advantageroll = roll("1d6") + (thiefskill * 2) + (user.STASPD / 3)
