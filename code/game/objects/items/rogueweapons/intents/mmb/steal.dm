@@ -27,6 +27,12 @@
 		
 		var/chance2steal = max(round(((6 + (thiefskill * 2) + (user.STASPD / 3) - (targetperception)) / 6 ) * 100, 1), 0)
 
+		//Mathematically:
+		// SPD stat is to give an initial baseline to lower skilled thieves and reward speedy thieves slightly.
+		// Journeyman thief will struggle to steal someone with combat mode on at 10 spd vs 10 perception. Otherwise will steal most of the time
+		// Very high skilled thieves will be able to manage it quite handily, as long as they're out of sight.
+		// Matthios thieves get a substantial advantage to pickpocketing.
+
 		var/stealroll = max(initialstealroll, advantageroll)
 
 		var/list/stealablezones = list("chest", "neck", "groin", "r_hand", "l_hand")
