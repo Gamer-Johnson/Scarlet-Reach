@@ -1035,6 +1035,9 @@
 		/obj/item/rogueweapon/woodstaff/riddle_of_steel/magos, //bit dumb for a bandit mage to toss this toy away but whatever
 		/obj/item/rogueweapon/halberd/psyhalberd, // relic weapons but not standard Inquisition stuff 
 		/obj/item/rogueweapon/greatsword/psygsword,
+		/obj/rogueitem/carvedgem,  //Some of these aren't particularly worth much, but it'd be REALLY unintuitive for "valuables" to not actually be worth robbing
+		/obj/item/rogueweapon/huntingknife/stoneknife/kukri,
+		/obj/item/weapon/knife/stone/opal,
 	)
 
 /obj/structure/fluff/statue/evil/attackby(obj/item/W, mob/user, params)
