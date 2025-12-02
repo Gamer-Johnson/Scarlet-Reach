@@ -72,7 +72,7 @@
 	to_chat(H, span_warning("You're a goon, a low-lyfe thug in a painful world - not good enough for war, not smart enough for peace. What you lack in station you make up for in daring."))
 	H.set_blindness(0)
 	var/options = list("Frypan", "Knuckles", "Navaja", "Bare Hands", "Whatever I Can Find")
-	var/option_choice = input("Choose your means.", "TAKE UP ARMS") as anything in options
+	var/option_choice = input(H, "Choose your means.", "TAKE UP ARMS") as anything in options
 	switch(option_choice)
 		if("Frypan")
 			H.adjust_skillrank_up_to(/datum/skill/craft/cooking, SKILL_LEVEL_EXPERT, TRUE)
@@ -130,7 +130,7 @@
 	to_chat(H, span_warning("You're smarter than the rest, by a stone's throw - and you know better than to get up close and personal. Unlike most others, you can read."))
 	H.set_blindness(0)
 	var/options = list("Stone Sling", "Magic Bricks", "Lockpicking Equipment")
-	var/option_choice = input("Choose your means.", "TAKE UP ARMS") as anything in options
+	var/option_choice = input(H, "Choose your means.", "TAKE UP ARMS") as anything in options
 	switch(option_choice)
 		if("Stone Sling")
 			H.adjust_skillrank_up_to(/datum/skill/combat/slings, SKILL_LEVEL_EXPERT, TRUE)
@@ -178,7 +178,7 @@
 	to_chat(H, span_warning("More akin to a corn-fed monster than a normal man, your size and strength are your greatest weapons; though they hardly supplement what's missing of your brains."))
 	H.set_blindness(0)
 	var/options = list("Hands-On", "Big Axe")
-	var/option_choice = input("Choose your means.", "TAKE UP ARMS") as anything in options
+	var/option_choice = input(H, "Choose your means.", "TAKE UP ARMS") as anything in options
 	switch(option_choice) // you are big dumb guy, none of your options give you expert-level weapons skill
 		if("Hands-On")
 			ADD_TRAIT(H, TRAIT_BASHDOORS, TRAIT_GENERIC) // deal 200 damage to a door you sprint-charge into

@@ -69,7 +69,7 @@
 		H.adjust_skillrank_up_to(/datum/skill/magic/arcane, SKILL_LEVEL_MASTER, TRUE)
 		H?.mind.adjust_spellpoints(6)
 	var/classes = list("Hedge Mage","Rogue Mage")
-	var/classchoice = input("Choose your archetypes", "Available archetypes") as anything in classes
+	var/classchoice = input(H, "Choose your archetypes", "Available archetypes") as anything in classes
 	switch(classchoice)
 		if("Hedge Mage")
 			H?.mind.adjust_spellpoints(6)

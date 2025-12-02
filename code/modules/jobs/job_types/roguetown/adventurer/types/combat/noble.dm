@@ -99,7 +99,7 @@
 		"Slitted Kettle"		= /obj/item/clothing/head/roguetown/helmet/heavy/knight/skettle,
 		"None"
 		)
-	var/helmchoice = input("Choose your Helm.", "TAKE UP HELMS") as anything in helmets
+	var/helmchoice = input(H, "Choose your Helm.", "TAKE UP HELMS") as anything in helmets
 	if(helmchoice != "None")
 		head = helmets[helmchoice]
 
@@ -109,7 +109,7 @@
 		"Steel Cuirass"		= /obj/item/clothing/suit/roguetown/armor/plate/half,
 		"Fluted Cuirass"	= /obj/item/clothing/suit/roguetown/armor/plate/half/fluted,		
 	)
-	var/armorchoice = input("Choose your armor.", "TAKE UP ARMOR") as anything in armors
+	var/armorchoice = input(H, "Choose your armor.", "TAKE UP ARMOR") as anything in armors
 	armor = armors[armorchoice]
 
 	gloves = /obj/item/clothing/gloves/roguetown/chain
@@ -133,7 +133,7 @@
 		new /mob/living/simple_animal/hostile/retaliate/rogue/saiga/tame/saddled(TU)
 	H.set_blindness(0)
 	var/weapons = list("Longsword","Mace + Shield","Flail + Shield","Billhook","Battle Axe","Greataxe")
-	var/weapon_choice = input("Choose your weapon.", "TAKE UP ARMS") as anything in weapons
+	var/weapon_choice = input(H, "Choose your weapon.", "TAKE UP ARMS") as anything in weapons
 	switch(weapon_choice)
 		if("Longsword")
 			H.adjust_skillrank_up_to(/datum/skill/combat/swords, SKILL_LEVEL_JOURNEYMAN, TRUE)
@@ -202,7 +202,7 @@
 	beltl = /obj/item/flashlight/flare/torch/lantern
 	backpack_contents = list(/obj/item/storage/belt/rogue/pouch/coins/poor = 1, /obj/item/rogueweapon/hammer/iron = 1, /obj/item/rogueweapon/tongs = 1, /obj/item/recipe_book/survival = 1)
 	var/armors = list("Light Armor","Medium Armor")
-	var/armor_choice = input("Choose your armor.", "TAKE UP ARMS") as anything in armors
+	var/armor_choice = input(H, "Choose your armor.", "TAKE UP ARMS") as anything in armors
 	switch(armor_choice)
 		if("Light Armor")
 			shirt = /obj/item/clothing/suit/roguetown/armor/gambeson

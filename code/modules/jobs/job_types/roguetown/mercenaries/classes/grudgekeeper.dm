@@ -60,7 +60,7 @@
 			/obj/item/natural/feather,
 			)
 		var/weapons = list("Warpick + Dwarven Shield", "Warhammer + Dwarven Shield", "Battle Axe + Dwarven Shield", "Great Axe", "Grandmace")
-		var/wepchoice = input("Choose your weapon", "Available weapons") as anything in weapons
+		var/wepchoice = input(H, "Choose your weapon", "Available weapons") as anything in weapons
 		switch(wepchoice)
 
 			if("Warpick + Dwarven Shield")

@@ -92,7 +92,7 @@
 	backpack_contents = list(/obj/item/recipe_book/survival = 1)
 	H.set_blindness(0)
 	var/weapons = list("Naginata","Quarterstaff")
-	var/weapon_choice = input("Choose your weapon.", "TAKE UP ARMS") as anything in weapons
+	var/weapon_choice = input(H, "Choose your weapon.", "TAKE UP ARMS") as anything in weapons
 	switch(weapon_choice)
 		if("Naginata")
 			r_hand = /obj/item/rogueweapon/spear/naginata
@@ -149,7 +149,7 @@
 	shoes = /obj/item/clothing/shoes/roguetown/boots
 	H.set_blindness(0)
 	var/weapons = list("Tanto","Kodachi")
-	var/weapon_choice = input("Choose your weapon.", "TAKE UP ARMS") as anything in weapons
+	var/weapon_choice = input(H, "Choose your weapon.", "TAKE UP ARMS") as anything in weapons
 	switch(weapon_choice)
 		if("Tanto")
 			beltr = /obj/item/rogueweapon/huntingknife/idagger/steel/kazengun
@@ -160,7 +160,7 @@
 			beltl = /obj/item/rogueweapon/scabbard/sword/kazengun/kodachi
 			H.adjust_skillrank_up_to(/datum/skill/combat/swords, 4, TRUE)
 	var/masks = list("Oni","Kitsune")
-	var/mask_choice = input("Choose your mask.", "HIDE YOURSELF") as anything in masks
+	var/mask_choice = input(H, "Choose your mask.", "HIDE YOURSELF") as anything in masks
 	switch(mask_choice)
 		if("Oni")
 			mask = /obj/item/clothing/mask/rogue/facemask/yoruku_oni
@@ -168,7 +168,7 @@
 			mask = /obj/item/clothing/mask/rogue/facemask/yoruku_kitsune
 
 	var/belts = list("Shurikens","Smokebombs")
-	var/belt_choice = input("Choose your belt.", "BELT YOURSELF") as anything in belts
+	var/belt_choice = input(H, "Choose your belt.", "BELT YOURSELF") as anything in belts
 	switch(belt_choice)
 		if("Shurikens")
 			belt = /obj/item/storage/belt/rogue/leather/knifebelt/black/kazengun

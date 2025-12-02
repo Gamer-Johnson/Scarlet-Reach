@@ -35,7 +35,7 @@
 	H.dna.species.soundpack_m = new /datum/voicepack/male/warrior()
 	H.set_blindness(0)
 	var/weapons = list("Longsword","Mace","Billhook","Battle Axe","Short Sword & Iron Shield")
-	var/weapon_choice = input("Choose your weapon.", "TAKE UP ARMS") as anything in weapons
+	var/weapon_choice = input(H, "Choose your weapon.", "TAKE UP ARMS") as anything in weapons
 	switch(weapon_choice)
 		if("Longsword")
 			H.adjust_skillrank_up_to(/datum/skill/combat/swords, SKILL_LEVEL_EXPERT, TRUE)
@@ -55,7 +55,7 @@
 			backr = /obj/item/rogueweapon/shield/iron
 			beltr = /obj/item/rogueweapon/sword/iron/short
 	var/armors = list("Chainmaille Set","Iron Breastplate","Gambeson & Helmet")
-	var/armor_choice = input("Choose your armor.", "TAKE UP ARMOR") as anything in armors
+	var/armor_choice = input(H, "Choose your armor.", "TAKE UP ARMOR") as anything in armors
 	switch(armor_choice)
 		if("Chainmaille Set")
 			shirt = /obj/item/clothing/suit/roguetown/armor/chainmail/iron
@@ -105,7 +105,7 @@
 
 /datum/outfit/job/adventurer/barbarian/pre_equip(mob/living/carbon/human/H)
 	var/weapons = list("Katar","Axe","Sword","Club","Spear","MY BARE HANDS!!!")
-	var/weapon_choice = input("Choose your weapon.", "TAKE UP ARMS") as anything in weapons
+	var/weapon_choice = input(H, "Choose your weapon.", "TAKE UP ARMS") as anything in weapons
 	switch(weapon_choice)
 		if ("Katar")
 			H.adjust_skillrank_up_to(/datum/skill/combat/unarmed, SKILL_LEVEL_EXPERT, TRUE)
@@ -180,7 +180,7 @@
 
 /datum/outfit/job/adventurer/duelist/pre_equip(mob/living/carbon/human/H)
 	var/weapons = list("Rapier","Dagger")
-	var/weapon_choice = input("Choose your weapon.", "TAKE UP ARMS") as anything in weapons
+	var/weapon_choice = input(H, "Choose your weapon.", "TAKE UP ARMS") as anything in weapons
 	switch(weapon_choice)
 		if("Rapier")
 			H.adjust_skillrank_up_to(/datum/skill/combat/swords, SKILL_LEVEL_EXPERT, TRUE)
@@ -265,7 +265,7 @@
 	var/datum/devotion/C = new /datum/devotion(H, H.patron)
 	C.grant_miracles(H, cleric_tier = CLERIC_T0, passive_gain = FALSE, devotion_limit = (CLERIC_REQ_1 - 20))
 	var/steel = list("Arming Sword","Short Sword", "Dagger","Longsword","Slurbow")
-	var/steel_choice = input("Choose your steel, for slaying men.", "TAKE UP ARMS") as anything in steel
+	var/steel_choice = input(H, "Choose your steel, for slaying men.", "TAKE UP ARMS") as anything in steel
 	switch(steel_choice)
 		if("Arming Sword") //flat worse than the longsword so you get a shield
 			backr = /obj/item/rogueweapon/shield/wood // wood so you can carve a psycross/astratan cross on it
@@ -283,7 +283,7 @@
 			backr = /obj/item/gun/ballistic/revolver/grenadelauncher/crossbow/slurbow/old //their powered-down version of the inquisition slurbow
 			beltl = /obj/item/quiver/bolts
 	var/silver = list("Arming Sword","Short Sword", "Dagger","Tossblades")
-	var/silver_choice = input("Choose your silver, for slaying monsters.", "TAKE UP ARMS") as anything in silver
+	var/silver_choice = input(H, "Choose your silver, for slaying monsters.", "TAKE UP ARMS") as anything in silver
 	switch(silver_choice)
 		if("Arming Sword")
 			beltr = /obj/item/rogueweapon/sword/silver
@@ -348,7 +348,7 @@
 /datum/outfit/job/adventurer/amazon/pre_equip(mob/living/carbon/human/H, visualsOnly)
 
 	var/armor_styles = list("Leather Kini","Hide Armor Kini","Studded Leather Kini","Half Plate Kini","Plate Kini")
-	var/armor_choice = input("Choose your armor style", "Available armor styles") as anything in armor_styles
+	var/armor_choice = input(H, "Choose your armor style", "Available armor styles") as anything in armor_styles
 
 	switch(armor_choice)
 
@@ -381,7 +381,7 @@
 			neck = /obj/item/storage/belt/rogue/pouch/coins/poor
 			backpack_contents = list(/obj/item/flashlight/flare/torch = 1, /obj/item/rogueweapon/huntingknife = 1)
 			var/weapons = list("Steel Knuckles","Axe","Sword","Whip","Spear","MY BARE HANDS!!!")
-			var/weapon_choice = input("Choose your weapon.", "TAKE UP ARMS") as anything in weapons
+			var/weapon_choice = input(H, "Choose your weapon.", "TAKE UP ARMS") as anything in weapons
 			switch(weapon_choice)
 				if ("Steel Knuckles")
 					H.adjust_skillrank_up_to(/datum/skill/combat/unarmed, SKILL_LEVEL_JOURNEYMAN, TRUE)
@@ -433,7 +433,7 @@
 			neck = /obj/item/storage/belt/rogue/pouch/coins/poor
 			backpack_contents = list(/obj/item/flashlight/flare/torch = 1, /obj/item/rogueweapon/huntingknife = 1)
 			var/weapons = list("Steel Knuckles","Axe","Sword","Whip","Spear","MY BARE HANDS!!!")
-			var/weapon_choice = input("Choose your weapon.", "TAKE UP ARMS") as anything in weapons
+			var/weapon_choice = input(H, "Choose your weapon.", "TAKE UP ARMS") as anything in weapons
 			switch(weapon_choice)
 				if ("Steel Knuckles")
 					H.adjust_skillrank_up_to(/datum/skill/combat/unarmed, SKILL_LEVEL_JOURNEYMAN, TRUE)
@@ -484,7 +484,7 @@
 			neck = /obj/item/storage/belt/rogue/pouch/coins/poor
 			backpack_contents = list(/obj/item/flashlight/flare/torch = 1, /obj/item/rogueweapon/huntingknife/idagger/steel = 1)
 			var/weapons = list("Katar","Rapier","Whip","Billhook","MY BARE HANDS!!!")
-			var/weapon_choice = input("Choose your weapon.", "TAKE UP ARMS") as anything in weapons
+			var/weapon_choice = input(H, "Choose your weapon.", "TAKE UP ARMS") as anything in weapons
 			switch(weapon_choice)
 				if ("Katar")
 					H.adjust_skillrank_up_to(/datum/skill/combat/unarmed, SKILL_LEVEL_JOURNEYMAN, TRUE)
@@ -531,7 +531,7 @@
 			belt = /obj/item/storage/belt/rogue/leather
 			neck = /obj/item/storage/belt/rogue/pouch/coins/poor
 			var/weapons = list("Great Sword","Eagle's Beak","Battle Axe","MY BARE HANDS!!!")
-			var/weapon_choice = input("Choose your weapon.", "TAKE UP ARMS") as anything in weapons
+			var/weapon_choice = input(H, "Choose your weapon.", "TAKE UP ARMS") as anything in weapons
 			switch(weapon_choice)
 				if("Great Sword")
 					H.adjust_skillrank_up_to(/datum/skill/combat/swords, SKILL_LEVEL_JOURNEYMAN, TRUE)
@@ -576,7 +576,7 @@
 			neck = /obj/item/storage/belt/rogue/pouch/coins/poor
 			backpack_contents = list(/obj/item/flashlight/flare/torch = 1, /obj/item/rogueweapon/huntingknife = 1, /obj/item/recipe_book/survival = 1)
 			var/weapons = list("Sword and Tower Shield","Mace and Tower Shield","TWO TOWER SHIELDS!!!")
-			var/weapon_choice = input("Choose your weapon.", "TAKE UP ARMS") as anything in weapons
+			var/weapon_choice = input(H, "Choose your weapon.", "TAKE UP ARMS") as anything in weapons
 			switch(weapon_choice)
 				if("Sword and Tower Shield")
 					H.adjust_skillrank_up_to(/datum/skill/combat/swords, SKILL_LEVEL_JOURNEYMAN, TRUE)

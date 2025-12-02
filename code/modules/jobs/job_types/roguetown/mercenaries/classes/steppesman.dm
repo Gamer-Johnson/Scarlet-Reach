@@ -45,7 +45,7 @@
 	// CLASS ARCHETYPES
 	H.adjust_blindness(-3)
 	var/classes = list("Szabrista - Saber Veteran", "Árkász - Elite Sapper", "Druzhina - Light Archer","Kozak - Light Infantry")
-	var/classchoice = input("Choose your archetypes", "Available archetypes") as anything in classes
+	var/classchoice = input(H, "Choose your archetypes", "Available archetypes") as anything in classes
 
 	switch(classchoice)
 		if("Szabrista - Saber Veteran")	//Tl;dr - medium armor class for Mount and Blade larpers who still get a saiga. Akin to Vaquero with specific drip.
@@ -80,7 +80,7 @@
 			"Beast"		= /obj/item/clothing/mask/rogue/facemask/steel/steppesman/anthro,
 			"None"
 	)
-			var/maskchoice = input("What fits your face?", "MASK SELECTION") as anything in masks
+			var/maskchoice = input(H, "What fits your face?", "MASK SELECTION") as anything in masks
 			if(maskchoice != "None")
 				mask = masks[maskchoice]
 
@@ -118,7 +118,7 @@
 			"Beast"		= /obj/item/clothing/mask/rogue/facemask/steel/steppesman/anthro,
 			"None"
 	)
-			var/maskchoice = input("What fits your face?", "MASK SELECTION") as anything in masks
+			var/maskchoice = input(H, "What fits your face?", "MASK SELECTION") as anything in masks
 			if(maskchoice != "None")
 				mask = masks[maskchoice]
 

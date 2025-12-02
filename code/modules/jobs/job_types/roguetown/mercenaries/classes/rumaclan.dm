@@ -98,7 +98,7 @@
 		)
 
 	var/belts = list("Shurikens","Smokebombs")
-	var/belt_choice = input("Choose your belt.", "BELT YOURSELF") as anything in belts
+	var/belt_choice = input(H, "Choose your belt.", "BELT YOURSELF") as anything in belts
 	switch(belt_choice)
 		if("Shurikens")
 			belt = /obj/item/storage/belt/rogue/leather/knifebelt/black/kazengun

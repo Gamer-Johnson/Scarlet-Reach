@@ -141,7 +141,7 @@
 		"Flail & Shield",
 		"Law & Order (Sabre & Buckler)",
 		)
-	var/weapon_choice = input("Choose your weapon.", "TAKE UP ARMS") as anything in weapons
+	var/weapon_choice = input(H, "Choose your weapon.", "TAKE UP ARMS") as anything in weapons
 	H.set_blindness(0)
 	switch(weapon_choice)
 		if("Zweihander")
@@ -226,7 +226,7 @@
 		"Deliverer (Glaive)", // new, unique weapon, different from the infantry captain's
 		"Lance + Kite Shield"
 		)
-	var/weapon_choice = input("Choose your weapon.", "TAKE UP ARMS") as anything in weapons
+	var/weapon_choice = input(H, "Choose your weapon.", "TAKE UP ARMS") as anything in weapons
 	H.set_blindness(0)
 	switch(weapon_choice)
 		if("Longsword & Recurve Bow")

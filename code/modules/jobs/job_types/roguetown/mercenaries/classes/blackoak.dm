@@ -44,7 +44,7 @@
 	..()
 
 	var/weapons = list("Glaive", "Boar Spear + Kite",  "Elven Sabre & Buckler")
-	var/weapon_choice = input("Choose your weapon.", "TAKE UP ARMS") as anything in weapons
+	var/weapon_choice = input(H, "Choose your weapon.", "TAKE UP ARMS") as anything in weapons
 	switch(weapon_choice)
 		if("Glaive")
 			r_hand = /obj/item/rogueweapon/halberd/glaive

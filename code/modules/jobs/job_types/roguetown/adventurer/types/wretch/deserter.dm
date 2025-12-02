@@ -59,7 +59,7 @@
 		"Lance + Kite Shield",
 		"Samshir",
 	)
-	var/weapon_choice = input("Choose your weapon.", "TAKE UP ARMS") as anything in weapons
+	var/weapon_choice = input(H, "Choose your weapon.", "TAKE UP ARMS") as anything in weapons
 	H.set_blindness(0)
 	switch(weapon_choice)
 		if("Estoc")
@@ -97,7 +97,7 @@
 		"Kulah Khud"	= /obj/item/clothing/head/roguetown/helmet/sallet/raneshen,
 		"None"
 	)
-	var/helmchoice = input("Choose your Helm.", "TAKE UP HELMS") as anything in helmets
+	var/helmchoice = input(H, "Choose your Helm.", "TAKE UP HELMS") as anything in helmets
 	if(helmchoice != "None")
 		head = helmets[helmchoice]
 
@@ -108,7 +108,7 @@
 		"Fluted Cuirass"	= /obj/item/clothing/suit/roguetown/armor/plate/half/fluted,
 		"Scalemail"		= /obj/item/clothing/suit/roguetown/armor/plate/scale,
 	)
-	var/armorchoice = input("Choose your armor.", "TAKE UP ARMOR") as anything in armors
+	var/armorchoice = input(H, "Choose your armor.", "TAKE UP ARMOR") as anything in armors
 	armor = armors[armorchoice]
 	gloves = /obj/item/clothing/gloves/roguetown/plate 
 	pants = /obj/item/clothing/under/roguetown/chainlegs
@@ -168,7 +168,7 @@
 /datum/outfit/job/wretch/desertermaa/pre_equip(mob/living/carbon/human/H)
 	..()
 	var/weapons = list("Warhammer & Shield","Sabre & Shield","Axe & Shield","Billhook","Greataxe","Halberd",)
-	var/weapon_choice = input("Choose your weapon.", "TAKE UP ARMS") as anything in weapons
+	var/weapon_choice = input(H, "Choose your weapon.", "TAKE UP ARMS") as anything in weapons
 	H.set_blindness(0)
 	switch(weapon_choice)
 		if("Warhammer & Shield")
@@ -224,7 +224,7 @@
 	"Winged Helmet" 	= /obj/item/clothing/head/roguetown/helmet/winged,
 	"None"
 	)
-	var/helmchoice = input("Choose your Helm.", "TAKE UP HELMS") as anything in helmets
+	var/helmchoice = input(H, "Choose your Helm.", "TAKE UP HELMS") as anything in helmets
 	if(helmchoice != "None")
 		head = helmets[helmchoice]
 
@@ -234,7 +234,7 @@
 	"Wildguard"			= /obj/item/clothing/mask/rogue/wildguard,
 	"None"
 	)
-	var/maskchoice = input("Choose your Mask.", "MASK MASK MASK") as anything in masks // Run from it. MASK. MASK. MASK.
+	var/maskchoice = input(H, "Choose your Mask.", "MASK MASK MASK") as anything in masks // Run from it. MASK. MASK. MASK.
 	if(maskchoice != "None")
 		mask = masks[maskchoice]	
 

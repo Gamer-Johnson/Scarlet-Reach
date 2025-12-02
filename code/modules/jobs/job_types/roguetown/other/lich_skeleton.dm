@@ -69,7 +69,7 @@ LICH SKELETONS
 	beltl = /obj/item/quiver/javelin/paalloy
 	H.adjust_blindness(-3)
 	var/weapons = list("Gladius","Kopesh","Shortsword","Axe", "Flail", "Greatsword", "Bardiche", "Mace + Shield", "Spear", "Warhammer + Shield")
-	var/weapon_choice = input("Choose your weapon.", "TAKE UP ARMS") as anything in weapons
+	var/weapon_choice = input(H, "Choose your weapon.", "TAKE UP ARMS") as anything in weapons
 	H.set_blindness(0)
 	switch(weapon_choice)
 		if("Gladius")
@@ -157,7 +157,7 @@ LICH SKELETONS
 	beltr = /obj/item/rogueweapon/huntingknife/idagger/steel/padagger
 	H.adjust_blindness(-3)
 	var/weapons = list("Recurve Bow","Yew Longbow","Sling")
-	var/weapon_choice = input("Choose your weapon.", "TAKE UP ARMS") as anything in weapons
+	var/weapon_choice = input(H, "Choose your weapon.", "TAKE UP ARMS") as anything in weapons
 	H.set_blindness(0)
 	switch(weapon_choice)
 		if("Recurve Bow")

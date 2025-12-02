@@ -58,7 +58,7 @@
 		)
 
 	var/weapons = list("Axe and Shield","Shamshir and Shield","Spear and Shield")
-	var/weapon_choice = input("Choose your weapon.", "TAKE UP ARMS") as anything in weapons
+	var/weapon_choice = input(H, "Choose your weapon.", "TAKE UP ARMS") as anything in weapons
 	H.set_blindness(0)
 	switch(weapon_choice)
 		if("Axe and Shield")
@@ -139,7 +139,7 @@
 		)
 
 	var/weapons = list("Shamshir and Javelin","Whips and Knives", "Recurve Bow")
-	var/weapon_choice = input("Choose your weapon.", "TAKE UP ARMS") as anything in weapons
+	var/weapon_choice = input(H, "Choose your weapon.", "TAKE UP ARMS") as anything in weapons
 	H.set_blindness(0)
 	switch(weapon_choice)
 		if("Shamshir and Javelin")

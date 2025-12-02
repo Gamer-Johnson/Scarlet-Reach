@@ -110,7 +110,7 @@
 
 	H.adjust_blindness(-3)
 	var/weapons = list("Warhammer & Shield","Axe & Shield","Sword & Shield","Halberd","Spear")
-	var/weapon_choice = input("Choose your weapon.", "TAKE UP ARMS") as anything in weapons
+	var/weapon_choice = input(H, "Choose your weapon.", "TAKE UP ARMS") as anything in weapons
 	H.set_blindness(0)
 	switch(weapon_choice)
 		if("Warhammer & Shield")
@@ -147,7 +147,7 @@
 	"Winged Helmet" 	= /obj/item/clothing/head/roguetown/helmet/winged,
 	"None"
 	)
-	var/helmchoice = input("Choose your Helm.", "TAKE UP HELMS") as anything in helmets
+	var/helmchoice = input(H, "Choose your Helm.", "TAKE UP HELMS") as anything in helmets
 	if(helmchoice != "None")
 		head = helmets[helmchoice]
 
@@ -196,7 +196,7 @@
 
 	H.adjust_blindness(-3)
 	var/rweapons = list("Crossbow","Bow","Sling")
-	var/rweapon_choice = input("Choose your weapon.", "TAKE UP ARMS") as anything in rweapons
+	var/rweapon_choice = input(H, "Choose your weapon.", "TAKE UP ARMS") as anything in rweapons
 	H.set_blindness(0)
 	switch(rweapon_choice)
 		if("Crossbow")
@@ -209,7 +209,7 @@
 			beltr = /obj/item/quiver/sling/iron
 			r_hand = /obj/item/gun/ballistic/revolver/grenadelauncher/sling // Both are belt slots and it's not worth setting where the cugel goes for everyone else, sad.
 	var/weapons = list("Sword","Dagger","Trusty Cudgel")
-	var/weapons_choice = input("Choose your melee weapon.", "TAKE UP ARMS") as anything in weapons
+	var/weapons_choice = input(H, "Choose your melee weapon.", "TAKE UP ARMS") as anything in weapons
 	switch(weapons_choice)
 		if("Sword")
 			r_hand = /obj/item/rogueweapon/sword
@@ -234,7 +234,7 @@
 	"Winged Helmet" 	= /obj/item/clothing/head/roguetown/helmet/winged,
 	"None"
 	)
-	var/helmchoice = input("Choose your Helm.", "TAKE UP HELMS") as anything in helmets
+	var/helmchoice = input(H, "Choose your Helm.", "TAKE UP HELMS") as anything in helmets
 	if(helmchoice != "None")
 		head = helmets[helmchoice]
 
@@ -283,7 +283,7 @@
 
 	H.adjust_blindness(-3)
 	var/weapons = list("Bardiche","Sword & Shield")
-	var/weapon_choice = input("Choose your weapon.", "TAKE UP ARMS") as anything in weapons
+	var/weapon_choice = input(H, "Choose your weapon.", "TAKE UP ARMS") as anything in weapons
 	H.set_blindness(0)
 	switch(weapon_choice)
 		if("Bardiche")
@@ -312,6 +312,6 @@
 	"Studded Leather Hood" = /obj/item/clothing/head/roguetown/helmet/leather/armorhood/advanced,
 	"None"
 	)
-	var/helmchoice = input("Choose your Helm.", "TAKE UP HELMS") as anything in helmets
+	var/helmchoice = input(H, "Choose your Helm.", "TAKE UP HELMS") as anything in helmets
 	if(helmchoice != "None")
 		head = helmets[helmchoice]

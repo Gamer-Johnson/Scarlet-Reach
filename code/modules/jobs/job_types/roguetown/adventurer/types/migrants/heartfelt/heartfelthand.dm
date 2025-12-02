@@ -80,7 +80,7 @@
 		// H.mind.AddSpell(new/obj/effect/proc_holder/spell/invoked/order/heartfelt/focustarget)
 		H.verbs |= list(/mob/living/carbon/human/mind/proc/setordersheartfelt)
 	var/helmet = list("Etruscan Bascinet","Beak Helmet","Visored Sallet",)
-	var/helmet_choice = input("Choose your Helm.", "TAKE UP HELMS") as anything in helmet
+	var/helmet_choice = input(H, "Choose your Helm.", "TAKE UP HELMS") as anything in helmet
 	switch(helmet_choice)
 		if("Etruscan Bascinet")
 			head = /obj/item/clothing/head/roguetown/helmet/bascinet/etruscan
