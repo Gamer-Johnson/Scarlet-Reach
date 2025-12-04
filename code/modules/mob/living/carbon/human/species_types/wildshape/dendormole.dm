@@ -13,7 +13,7 @@
 /mob/living/carbon/human/species/wildshape/dendormole/gain_inherent_skills()
 	. = ..()
 	if(src.mind)
-		src.adjust_skillrank(/datum/skill/combat/wrestling, 4, TRUE)
+		src.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE) //We don't want this thing wrestling people.
 		src.adjust_skillrank(/datum/skill/combat/unarmed, 4, TRUE)
 		src.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
 		src.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
@@ -40,15 +40,12 @@
 		TRAIT_STRONGBITE,
 		TRAIT_STEELHEARTED,
 		TRAIT_BREADY, //Ambusher
-		TRAIT_ORGAN_EATER,
 		TRAIT_WILD_EATER,
 		TRAIT_HARDDISMEMBER, //Decapping causes them to bug out, badly, and need admin intervention to fix. Bandaid fix.
 		TRAIT_PIERCEIMMUNE, //Prevents weapon dusting and caltrop effects due to them transforming when killed/stepping on shards.
 		TRAIT_LONGSTRIDER,
 		TRAIT_PERFECT_TRACKER,
 		TRAIT_NOPAINSTUN, //This bad boy ENDVRES
-		TRAIT_NIGHT_VISION,
-		TRAIT_NIGHT_OWL,
 		TRAIT_BIGGUY,
 	)
 	inherent_biotypes = MOB_HUMANOID
